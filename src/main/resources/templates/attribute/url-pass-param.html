@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Url Pass Param</title>
+</head>
+<body>
+	<h2>Url Pass Param</h2>
+	
+	<div th:each="product : ${products}">
+		<span th:text="${product.id}"></span> | 
+		<span th:text="${product.name}"></span> | 
+		<span th:text="${product.price}"></span> | 
+		<span>
+			<a th:href="@{/url-pass-param/product(id=${product.id})}">Details</a>
+		</span> | 
+		<span>
+			<a th:href="@{/url-pass-param/product/edit/{id}(id=${product.id})}">Edit</a>
+		</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Url Pass Param Product</title>
+</head>
+<body>
+	<h2>Url Pass Param Product</h2>
+	
+	<span th:text="${product.id}"></span> | 
+	<span th:text="${product.name}"></span> | 
+	<span th:text="${product.price}"></span> | 
+	<span>
+		<a th:href="@{/url-pass-param}">List Product</a>
+	</span>
+</body>
+</html>

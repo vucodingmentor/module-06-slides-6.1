@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Attributes</title>
+</head>
+<body>
+	<h2>Attributes</h2>
+	
+	<div th:if="${not #lists.isEmpty(students)}">
+		<div th:each="item, itemStat  : ${students}">
+			<span th:text="${itemStat.index + 1}"></span> | 
+			<span th:text="${item.fullName}"></span> | 
+			<span th:text="${item.courseName}"></span>
+		</div>
+	</div>
+</body>
+</html>

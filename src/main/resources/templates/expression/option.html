@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Options</title>
+</head>
+<body>
+	<h2>Options</h2>
+	
+	<h4 th:utext="${student.fullName}"></h4>
+	<span th:utext="${student.courseName}"></span>
+	
+	<h4 th:utext="*{student.fullName}"></h4>
+	<span th:utext="*{student.courseName}"></span>
+</body>
+</html>
